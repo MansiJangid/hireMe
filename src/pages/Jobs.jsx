@@ -3,6 +3,7 @@ import JobCard from '../components/job/JobCard'
 import '../index.css'
 import useJobStore from '../store/jobStore'
 import { useNavigate } from 'react-router-dom'
+import Header from '../components/job/Header'
 
 export const Jobs = () =>{
     const {jobs, loading, fetchJobs} = useJobStore();
@@ -29,8 +30,8 @@ export const Jobs = () =>{
 
     return(
         <div>
+            <Header/>
             <div className="bg-gradient-to-r from-orange-400 via-pink-500 to-red-500 flex-col justify-center p-10 text-center">
-            
                 <h1 className="text-white m-5 text-2xl font-bold ">Your Dream Job is Just a Click Away!</h1>
                 <input 
                     type="text" 
